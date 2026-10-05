@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <!-- Header -->
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-icon">✦</div>
+                <div>
+                    <h1>Research AI</h1>
+                    <p>Intelligent Research Agent</p>
+                </div>
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                <span>Ready</span>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main>
+            <section class="hero">
+                <div class="eyebrow">AI-POWERED RESEARCH</div>
+                <h2>Turn a question into <span>deep research.</span></h2>
+                <p class="hero-text">
+                    Enter a topic and let your Research AI Agent plan, investigate, verify, and synthesize findings.
+                </p>
+            </section>
+
+            <!-- Research Input -->
+            <section class="research-card">
+                <label for="topic">Research topic</label>
+                <textarea id="topic" placeholder="Example: Impact of Generative AI on Software Development"></textarea>
+
+                <div class="input-footer">
+                    <span id="characterCount">0 characters</span>
+                    <button id="researchButton">
+                        <span>✦</span> Start Research
+                    </button>
+                </div>
+            </section>
+
+            <!-- Capabilities -->
+            <section class="capabilities">
+                <div class="capability">
+                    <span class="capability-icon">◇</span>
+                    <div>
+                        <strong>Planning</strong>
+                        <small>Structured research</small>
+                    </div>
+                </div>
+
+                <div class="capability">
+                    <span class="capability-icon">◌</span>
+                    <div>
+                        <strong>Research</strong>
+                        <small>Information gathering</small>
+                    </div>
+                </div>
+
+                <div class="capability">
+                    <span class="capability-icon">✓</span>
+                    <div>
+                        <strong>Verification</strong>
+                        <small>Evidence checking</small>
+                    </div>
+                </div>
+
+                <div class="capability">
+                    <span class="capability-icon">▤</span>
+                    <div>
+                        <strong>Synthesis</strong>
+                        <small>Final report</small>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress -->
+            <section id="progressSection" class="result-card hidden">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-label">RESEARCH ACTIVITY</span>
+                        <h3>Working on your research</h3>
+                    </div>
+                    <div id="researchSpinner" class="spinner"></div>
+                </div>
+
+                <div class="progress-line">
+                    <div id="progressBar" class="progress-fill"></div>
+                </div>
+
+                <div id="status" class="research-status">Preparing research...</div>
+                <div id="activity" class="activity-list"></div>
+            </section>
+
+            <!-- Result -->
+            <section id="resultSection" class="result-section hidden">
+                <div class="report-header">
+                    <div>
+                        <span class="report-label">AI RESEARCH REPORT</span>
+                        <h1>Research Results</h1>
+                    </div>
+                    <div class="report-status">✓ Completed</div>
+                </div>
+
+                <div id="reportContent" class="report-content"></div>
+            </section>
+
+            <!-- Error -->
+            <div id="error" class="error-message hidden"></div>
+        </main>
+
+        <footer>Built with a real AI Research Agent</footer>
+    </div>
+
+    <!-- Script loaded at the bottom of <body> for guaranteed DOM readiness -->
+    <script src="/static/app.js"></script>
+</body>
+</html>
